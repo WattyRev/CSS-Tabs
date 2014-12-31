@@ -14,14 +14,23 @@ $(function() {
     	}
 	}
 	$('#' + tab).attr('checked', 'checked');
-
+	console.log(tab);
 	$('input:radio').change(function() {
 		var radio = $(this);
 		if (!radio.parents('.tab-wrapper')) {
 			return;
 		}
 		var id = radio.attr('id');
-		var url = location.href.replace("tab="+tab, "tab="+id);
+		var url = '';
+		if (tab){
+			url = location.href.replace("tab="+tab, "tab="+id);
+		} else {
+			if (q[0] !== '') {
+				url = location.href + '&tab='+id;
+			} else {
+				url = location.href + '?tab='+id;
+			}
+		}
 		tab = id;
 		history.pushState(null, null, url);
 	});
