@@ -1,0 +1,16 @@
+/**
+ * CSS-Tabs Plugin Styles Fallback
+ * Spencer Watson [wattydev.com]
+ * https://github.com/WattyRev/CSS-Tabs
+ */
+.tab-wrapper>.tab-content>div {
+	display:none;
+}
+.tab-wrapper>.tab-content>div.active{
+	display:block;
+}
+
+/* Style for selected tab */
+.tab-wrapper>.tab-navigation>.tab.active, .tab-wrapper>.tab-navigation>.tab:hover{
+	text-decoration: underline;
+}
