@@ -14,7 +14,6 @@ $(function() {
     	}
 	}
 	$('#' + tab).attr('checked', 'checked');
-	console.log(tab);
 	$('input:radio').change(function() {
 		var radio = $(this);
 		if (!radio.parents('.tab-wrapper')) {
