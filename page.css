@@ -1,0 +1,39 @@
+/**
+ * CSS-Tabs Page Styles
+ * Spencer Watson [wattydev.com]
+ * https://github.com/WattyRev/CSS-Tabs
+ */
+html {
+	font-family: sans-serif;
+	color:#444;
+}
+.tab-navigation {
+	margin: 0;
+	padding: 0;
+	list-style:none;
+}
+.tab-navigation .tab {
+	display:inline-block;
+	padding: 5px 10px;
+	cursor:pointer;
+	opacity:.5;
+	transition: .3s opacity;
+	font-weight:bold;
+}
+.tab-navigation .tab:hover {
+	opacity:1;
+}
+
+/* Use this snippet to apply active styles for selected tab */
+.tab-wrapper>input[type="radio"]:nth-child(1):checked ~ .tab-navigation>.tab:nth-child(1),
+.tab-wrapper>input[type="radio"]:nth-child(2):checked ~ .tab-navigation>.tab:nth-child(2),
+.tab-wrapper>input[type="radio"]:nth-child(3):checked ~ .tab-navigation>.tab:nth-child(3),
+.tab-wrapper>input[type="radio"]:nth-child(4):checked ~ .tab-navigation>.tab:nth-child(4),
+.tab-wrapper>input[type="radio"]:nth-child(5):checked ~ .tab-navigation>.tab:nth-child(5),
+.tab-wrapper>input[type="radio"]:nth-child(6):checked ~ .tab-navigation>.tab:nth-child(6),
+.tab-wrapper>input[type="radio"]:nth-child(7):checked ~ .tab-navigation>.tab:nth-child(7),
+.tab-wrapper>input[type="radio"]:nth-child(8):checked ~ .tab-navigation>.tab:nth-child(8),
+.tab-wrapper>input[type="radio"]:nth-child(9):checked ~ .tab-navigation>.tab:nth-child(9),
+.tab-wrapper>input[type="radio"]:nth-child(10):checked ~ .tab-navigation>.tab:nth-child(10) {
+	opacity:1;
+}

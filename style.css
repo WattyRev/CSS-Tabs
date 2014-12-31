@@ -1,0 +1,32 @@
+/**
+ * CSS-Tabs Plugin Styles
+ * Spencer Watson [wattydev.com]
+ * https://github.com/WattyRev/CSS-Tabs
+ */
+.tab-wrapper {
+	position:relative;
+}
+.tab-wrapper>input[type="radio"]{
+	display:none;
+}
+.tab-wrapper>.tab-content>div {
+	position:absolute;
+	opacity:0;
+	height:0;
+	oveflow:hidden;
+	transition: .3s opacity;
+}
+.tab-wrapper>input[type="radio"]:nth-child(1):checked ~ .tab-content>div:nth-child(1),
+.tab-wrapper>input[type="radio"]:nth-child(2):checked ~ .tab-content>div:nth-child(2),
+.tab-wrapper>input[type="radio"]:nth-child(3):checked ~ .tab-content>div:nth-child(3),
+.tab-wrapper>input[type="radio"]:nth-child(4):checked ~ .tab-content>div:nth-child(4),
+.tab-wrapper>input[type="radio"]:nth-child(5):checked ~ .tab-content>div:nth-child(5),
+.tab-wrapper>input[type="radio"]:nth-child(6):checked ~ .tab-content>div:nth-child(6),
+.tab-wrapper>input[type="radio"]:nth-child(7):checked ~ .tab-content>div:nth-child(7),
+.tab-wrapper>input[type="radio"]:nth-child(8):checked ~ .tab-content>div:nth-child(8),
+.tab-wrapper>input[type="radio"]:nth-child(9):checked ~ .tab-content>div:nth-child(9),
+.tab-wrapper>input[type="radio"]:nth-child(10):checked ~ .tab-content>div:nth-child(10) {
+	height:initial;
+	overflow:initial;
+	opacity:1;
+}
