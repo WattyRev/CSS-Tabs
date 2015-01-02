@@ -8,12 +8,12 @@
  * document.ready
  */
 $(document).ready(function() {
-	$('.tab-wrapper>.tab-navigation .tab').click(function() {
-		var label = $(this);
-		var index = label.index() + 1;
-		var tab_group = label.parents('.tab-wrapper');
-		tab_group.find('.tab').removeClass('active');
-		label.addClass('active');
+	$('.tab-wrapper>.tab-navigation li').click(function() {
+		var tab = $(this);
+		var index = tab.index() + 1;
+		var tab_group = tab.parents('.tab-wrapper');
+		tab_group.find('.tab-item').removeClass('active');
+		tab.addClass('active');
 		tab_group.find('div:nth-child(' + index + ')').addClass('active');
 		tab_group.find('div:nth-child(' + index + ')').siblings('div').removeClass('active');
 	});

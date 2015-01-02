@@ -11,6 +11,6 @@
 }
 
 /* Style for selected tab */
-.tab-wrapper>.tab-navigation>.tab.active, .tab-wrapper>.tab-navigation>.tab:hover{
+.tab-wrapper>.tab-navigation>li.active, .tab-wrapper>.tab-navigation>li:hover{
 	text-decoration: underline;
 }
